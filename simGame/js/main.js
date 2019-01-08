@@ -54,8 +54,42 @@
 		// TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
 		// You might use the WinJS.Application.sessionState object, which is automatically saved and restored across suspension.
 		// If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
-	};
+    };
+    var myUI, userData;
 
+    userData = {
+        gBool: false,
+        pop: 0,
+        ying: 50,
+        yang: 50
+    };
+
+    myUI = {
+        init: () => {
+            var uData = localStorage.getItem("userData");
+
+            if (!uData || uData === null) {
+                localStorage.setItem("userData", JSON.stringify(userData));
+            } 
+
+            uData = localStorage.getItem("userData");
+            if (uData) {
+                var uuu = JSON.parse(uData);
+            }
+
+
+            console.log(uuu.gBool);
+
+            myUI.startMenu();
+        },
+        startMenu: () => {
+            //console.log("lg");
+        }
+    };
+
+    window.onload = () => {
+        myUI.init();
+    };
 	app.start();
 
 })();
