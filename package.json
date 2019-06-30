@@ -1,0 +1,22 @@
+{
+  "name": "simgame",
+  "version": "1.0.0",
+  "description": "clicker game designed for the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehawk82/simGame.git"
+  },
+  "author": "",
+  "license": "(MIT)",
+  "bugs": {
+    "url": "https://github.com/Ehawk82/simGame/issues"
+  },
+  "homepage": "https://github.com/Ehawk82/simGame#readme",
+  "devDependencies": {
+    "gScript2019": "git+https://github.com/Ehawk82/gScript2019.git"
+  }
+}
