@@ -1,4 +1,6 @@
-var myUI;
+var myUI, navBtnNames;
+
+navBtnNames = ["➕","🔬","📜","💲","🔋","💠","🔨","⚙"];
 
 myUI = {
 	init: function(){
@@ -9,8 +11,8 @@ myUI = {
 
 		footer.innerHTML = "2020 EHAWK LLC";
 
-		container.innerHTML = "divs n stuff";
 		container.className = "container";
+		container.onload = myUI.popCont(container);
 
 		header.innerHTML = "<h1>SIM GAME</h1>";
 
@@ -19,6 +21,22 @@ myUI = {
 
 		body.append(frame);
 		//console.log("alert: game initializing now");
+	},
+	popCont: function(container){
+		var nav = createEle("div");
+
+		nav.className = "nav";
+
+		for(var i = 0; i < navBtnNames.length; i++){
+			var btns = createEle("button");
+
+			btns.innerHTML = navBtnNames[i];
+			btns.className = "btns";
+
+			nav.append(btns);
+		}
+
+		container.append(nav);
 	}
 };
 
